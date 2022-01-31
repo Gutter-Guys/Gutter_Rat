@@ -109,6 +109,12 @@ Up to you, but I have marked each part as A (Accent) or B (Base) so you can do a
 
 # Assembly
 
+## X Extrusion
+If you are using the stock X extrusion, it will need to be shortened before it can be used. This can be done by cutting it down to 400mm. We designed the Gantry Brackets to not need an exact measurement, however if you remove a little bit from each end to get to 400mm, you can avoid the original E6 mounting holes allowing the X extrusion to used if you roll back to stock later on. Or simply use a fresh extrusion, completely your choice. 
+
+## Rails
+Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts.
+
 ## Printhead
 The EVA printhead system is amazingly well designed and very flexible. It was the sole reason this upgrade was completed. For the moment, this is compatible with EVA 2.4 setups so go crazy. If it fits EVA, it will fit this setup. I will not be duplicating any of their work here, please go directly to the EVA website and get all you need from there, including BOM and print configurations. 
 
@@ -130,6 +136,9 @@ From the top, you will need:
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 Repeat for the other side. Then mount with M5x10mm screws and M5 drop nuts.
+
+### After market pulleys
+Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
 
 ## Gantry
 A little more complicated than the idlers, but simple enough. 
@@ -154,6 +163,9 @@ From the top you will need:
 
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
+### After market pulleys
+Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
+
 ## Motor Mounts
 There are two options
 
@@ -162,9 +174,6 @@ Simply mount the Motor via the screw points. From there, use M5x10mm screws and 
 
 ### Version 2 (Clam shell design)
 TBC
-
-## Rails
-I am no guru, please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts.
 
 ## Other Components
 Similar to the rails, I will leave to you and the internet to work out how to mount things like custom controllers, Raspberry Pi etc. I only suggest to keep it simple and don't take too much on at one time as it will make trouble shooting hard.
