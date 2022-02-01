@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI Releases
 
 # Controls when the workflow will run
 on:
@@ -24,17 +24,18 @@ jobs:
       with:
         type: 'zip'
         filename: 'GR9.zip'
-        directory: ./GR9/STLs/
+        path: ./GR9/STLs/
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: GR9 zip
       uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
         filename: 'GR6.zip'
-        directory: ./GR6/STLs/
+        path: ./GR6/STLs/
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload GR6 / 9 Release
       uses: ncipollo/release-action@v1
       with:
+        bodyFile: "release.md"
         artifacts: 'GR6.zip,GR9.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
