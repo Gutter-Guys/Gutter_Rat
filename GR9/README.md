@@ -47,7 +47,7 @@ To complete this upgrade you will need the following
 ### GR9 STOCK
 - Order:
     - 2x MGN9 rails for Y gantry (MGN12 will not fit inside the panels)
-    - 1x MGN9 rail for X gantry (EVA now only supports MGN12)
+    - 1x MGN12 rail for X gantry (EVA now only supports MGN12)
     - Rasberry Pi 3B+/4/Zero2 (I am runnig a Zero 2 Wireless with PA/IS and Accelerometer)
     - 1mm washers/spacers
     - Extruder of Choice (Please use a EVA2.4 supported extruder)
@@ -63,7 +63,7 @@ To complete this upgrade you will need the following
 ### GR9 Modified
 - Order:
     - 2x MGN9 rails for Y gantry (MGN12 will not fit inside the panels)
-    - 1x MGN9 rail for X gantry (EVA now only supports MGN12)
+    - 1x MGN12 rail for X gantry (EVA now only supports MGN12)
     - Rasberry Pi 3B+/4/Zero2 (I am runnig a Zero 2 Wireless with PA/IS and Accelerometer)
     - 1mm washers/spacers
     - Extruder of Choice (Please use a EVA2.4 supported extruder)
