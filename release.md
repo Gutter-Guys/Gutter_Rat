@@ -1,1 +1,4 @@
-this file will be used to write about the up and coming release
+# Beta 0.3.0
+
+A lot has change since the last release numerous minor issues and sizing adjustments.
+
