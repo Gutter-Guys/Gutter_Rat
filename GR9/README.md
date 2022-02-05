@@ -46,13 +46,13 @@ To complete this upgrade you will need the following
 
 ### GR9 STOCK
 - Order:
-    - 2x MGN9 rails for Y gantry (MGN12 will not fit inside the panels)
-    - 1x MGN12 rail for X gantry (EVA now only supports MGN12)
+    - 2x MGN9H 350mm rails for Y gantry (MGN12 will not fit inside the panels)
+    - 1x MGN12H 350mm rail for X gantry (EVA now only supports MGN12)
     - Rasberry Pi 3B+/4/Zero2 (I am runnig a Zero 2 Wireless with PA/IS and Accelerometer)
     - 1mm washers/spacers
     - Extruder of Choice (Please use a EVA2.4 supported extruder)
     - Hotend of Choice (Please use a EVA2.4 supported hotend)
-    - M3 Heat Sets
+    - M3 Heat Sets (4 needed for mounting, more maybe needed for your EVA)
 - Reuse
     - Stock Belts (No cutting required)
     - Stock Motors  (Some testing required)
@@ -71,10 +71,15 @@ To complete this upgrade you will need the following
     - GT2 Belts
     - 2x Nema17 motors of your choice
     - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2)
-    - M3 Heat Sets
+    - M3 Heat Sets (4 needed for mounting, more maybe needed for your EVA)
 - Reuse
     - Stock pulleys
     - X Extrusion (Cut down slightly to fit) *note: you can buy and cut a new one*
+
+### Can I fit MGN12H on my Y if I already have them?
+Short answer: Yes it can be made to work
+
+Longer answer: You can use the GR9_MGN12_Gantry_Mount_TEST file for fitting the X gantry to the E6 via MGN12H rails. The issue is the over hang of the carriage is 2-3mm each side, which conflicts with the stock side panels. If you choose this change, you will need to *very* carefully space out the side panels. A couple check washers will work, or print a small spacer. Just be **very careful as this will add tension to the panels and may crack the acrylic if not tensioned properly!!!** Please, please be aware of this and take care. I would suggest adding spacers of varying depth down the side to avoid a shape bend on the last part of the panel. 
 
 # Printing Parts
 
