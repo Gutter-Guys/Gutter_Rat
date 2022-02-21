@@ -58,7 +58,7 @@ To complete this upgrade you will need the following
     - Stock Motors  (Some testing required)
     - Stock controller board (Please note the Klipper Configs will need to be tweaked to work on a stock board)
     - Stock pulleys
-    - X Extrusion (Cut down slightly to fit) *note: you can buy and cut a new one*
+    - X Extrusion (Cut down slightly to fit, 400mm mininum, 420mm maximum) *note: you can buy and cut a new one*
 
 ### GR9 Modified
 - Order:
@@ -70,11 +70,11 @@ To complete this upgrade you will need the following
     - Hotend of Choice (Please use a EVA2.4 supported hotend)
     - GT2 Belts
     - 2x Nema17 motors of your choice
-    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2)
+    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2), 6x TMC2209 required for Tri-Z modifications
     - M3 Heat Sets (4 needed for mounting, more maybe needed for your EVA)
 - Reuse
-    - Stock pulleys
-    - X Extrusion (Cut down slightly to fit) *note: you can buy and cut a new one*
+    - Stock pulleys or 13mm wide 20t idlers 
+    - X Extrusion (Cut down slightly to fit, 400mm mininum, 420mm maximum) *note: you can buy and cut a new one*
 
 ### Can I fit MGN12H on my Y if I already have them?
 Short answer: Yes it can be made to work
@@ -115,10 +115,10 @@ Up to you, but I have marked each part as A (Accent) or B (Base) so you can do a
 # Assembly
 
 ## X Extrusion
-If you are using the stock X extrusion, it will need to be shortened before it can be used. This can be done by cutting it down to 400mm. We designed the Gantry Brackets to not need an exact measurement, however if you remove a little bit from each end to get to 400mm, you can avoid the original E6 mounting holes allowing the X extrusion to used if you roll back to stock later on. Or simply use a fresh extrusion, completely your choice. 
+If you are using the stock X extrusion, it will need to be shortened before it can be used. This can be done by cutting it down to between 400mm to 420mm. We designed the Gantry Brackets to not need an exact measurement, however if you remove a little bit from each end to get to 400mm, you can avoid the original E6 mounting holes allowing the X extrusion to used if you roll back to stock later on. Or simply use a fresh extrusion, completely your choice. 
 
 ## Rails
-Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts.
+Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts. Mounting guides are included in the STL folder to make alignment easier. 
 
 ## Printhead
 The EVA printhead system is amazingly well designed and very flexible. It was the sole reason this upgrade was completed. For the moment, this is compatible with EVA 2.4 setups so go crazy. If it fits EVA, it will fit this setup. I will not be duplicating any of their work here, please go directly to the EVA website and get all you need from there, including BOM and print configurations. 
@@ -132,18 +132,23 @@ The idler setup is very simple and easy to put together.
 The two vertical M5x10mm screws will need to insert first as they can be hard to get in once the pulleys are in place.
 
 From the top, you will need:
-- 1mm washer/spacer
-- 2mm spacer (small black one reeused from E6 parts)
-- Stock pulley
+- 5mm printed spacer
+- Pulley
 - Compression washer (reused from E6)
-- Stock pulley
+- Pulley
 
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 Repeat for the other side. Then mount with M5x10mm screws and M5 drop nuts.
 
 ### After market pulleys
-Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
+The current configuration has been tested successfully with standard 20t ilders. You will need a 5mm bore, 13mm width idler. Anything more than 13mm width will require you to adjust the spacer configuration. 
+
+From the top you will need:
+- 7mm printed spacer
+- Pulley
+- Compression washer (reused from E6)
+- Pulley
 
 ## Gantry
 A little more complicated than the idlers, but simple enough. 
@@ -152,24 +157,60 @@ First, mount the Gantry Mounts to the Y Rail carriages. This is straight forward
 
 Then, add the two heat sets to each Gantry Bracket. Again, fairly straight forward. 
 
-Now the complicated part. Alight the Gantry Mounts in front of you so they sit as they would in printer. You will notice that one side of the Mounts has a slot and the other side is inclosed. They are set up as follows: (refer to pictures to confirm)
+Now the complicated part. Align the Gantry Mounts in front of you so they sit as they would in printer. You will notice that one side of the Mounts has a slot and the other side is inclosed. They are set up as follows: (refer to pictures to confirm)
 
-### Slotted side
+### Left - Slotted side
 From the top you will need:
-- Printed spacer
+- 2mm Printed Spacer
 - Stock pulley
-- 1mm washer
+- 13mm Printed Spacer
 
-### Enclosed side
+### Left - Enclosed side
 From the top you will need:
-- 1mm washer
+- 15mm Printed Spacer
 - Stock pulley
-- Printed spacer
+- 1mm washer/shim
+
+### Right - Slotted side
+From the top you will need:
+- 15mm Printed Spacer
+- Stock pulley
+- 1mm washer/shim
+
+### Left - Enclosed side
+From the top you will need:
+- 2mm Printed Spacer
+- Stock pulley
+- 13mm Printed Spacer
 
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 ### After market pulleys
-Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
+The current configuration has been tested successfully with standard 20t ilders. You will need a 5mm bore, 13mm width idler. Anything more than 13mm width will require you to adjust the spacer configuration. 
+
+### Left - Slotted side
+From the top you will need:
+- 3mm Printed Spacer
+- Pulley
+- 14mm Printed Spacer
+
+### Left - Enclosed side
+From the top you will need:
+- 16mm Printed Spacer
+- Pulley
+- 1mm washer/shim
+
+### Right - Slotted side
+From the top you will need:
+From the top you will need:
+- 16mm Printed Spacer
+- Pulley
+- 1mm washer/shim
+
+### Right - Enclosed side
+- 3mm Printed Spacer
+- Pulley
+- 14mm Printed Spacer
 
 ## Motor Mounts
 There are two options
