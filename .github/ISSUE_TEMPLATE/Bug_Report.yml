@@ -27,8 +27,8 @@ body:
       value: "An issue happened!"
     validations:
       required: true
-  - type: dropdown
-    id: input
+  - type: input
+    id: version
     attributes:
       label: Version
       description: What version of our software are you running?
