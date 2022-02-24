@@ -32,7 +32,7 @@ body:
     attributes:
       label: Version
       description: What version of our software are you running?
-      value: "Please enter the exact version you downloaded."
+      placeholder: "Please enter the exact version you downloaded."
     validations:
       required: true
   - type: dropdown
