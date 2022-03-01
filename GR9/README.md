@@ -66,15 +66,15 @@ To complete this upgrade you will need the following
 
 ### GR9 Modified (Preferred)
 - Order:
-    - 2x MGN9 rails for Y gantry (MGN12 will not fit inside the panels)
-    - 1x MGN12 rail for X gantry (EVA now only supports MGN12)
+    - 2x MGN9H rails for Y gantry (MGN12 will not fit inside the panels)
+    - 1x MGN12H rail for X gantry (EVA now only supports MGN12)
     - Rasberry Pi 3B+/4/Zero2 (I am runnig a Zero 2 Wireless with PA/IS and Accelerometer)
     - 1mm washers/spacers
     - Extruder of Choice (Please use a EVA2.4 supported extruder)
     - Hotend of Choice (Please use a EVA2.4 supported hotend)
     - GT2 Belts
     - 2x Nema17 motors of your choice
-    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2), 6x TMC2209 required for Tri-Z modifications
+    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2), 7x TMC2209 required for Tri-Z modifications
     - M3 Heat Sets (4 needed for mounting, more maybe needed for your EVA)
     - 13mm wide 20t idlers (6 toothed and 2 smooth)
 - Reuse
