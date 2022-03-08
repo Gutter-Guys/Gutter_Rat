@@ -15,14 +15,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
     - uses: oprypin/find-latest-tag@v1
       with:
-        repository: Gutter-Guys/Gutter_Rat/ # The repository to scan.
+        repository: Gutter-Guys/Gutter_Rat # The repository to scan.
         releases-only: false  # We know that all relevant tags have a GitHub release for them.
       id: GR  # The step ID to refer to later.
 
-    - run: echo "Octokit is at version ${{ steps.GR.outputs.tag }}"
+    - run: echo "is at version ${{ steps.GR.outputs.tag }}"
 
     - uses: actions/checkout@v3
       with:
@@ -36,7 +39,7 @@ jobs:
         path: ./GR9/STLs/*
         exclusions: '*.git* /*node_modules/* .editorconfig'
 
-    - name: GR9 zip
+    - name: GR6 zip
       uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
@@ -51,3 +54,26 @@ jobs:
         bodyFile: "release.md"
         artifacts: 'GR6.zip,GR9.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+# name: Releases
+
+# on: 
+#   push:
+#     tags:
+#     - '*'
+
+# jobs:
+
+#   build:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#     steps:
+#     - uses: actions/checkout@v2
+#     - uses: ncipollo/release-action@v1
+#       with:
+#         artifacts: "release.tar.gz,foo/*.txt"
+#         bodyFile: "body.md"
+#         token: ${{ secrets.GITHUB_TOKEN }}
