@@ -14,22 +14,20 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-#    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-
     - uses: oprypin/find-latest-tag@v1
-     with:
-       repository: Gutter-Guys/Gutter_Rat/ # The repository to scan.
-       releases-only: false  # We know that all relevant tags have a GitHub release for them.
-     id: GR  # The step ID to refer to later.
+      with:
+        repository: Gutter-Guys/Gutter_Rat/ # The repository to scan.
+        releases-only: false  # We know that all relevant tags have a GitHub release for them.
+      id: GR  # The step ID to refer to later.
 
     - run: echo "Octokit is at version ${{ steps.GR.outputs.tag }}"
 
     - uses: actions/checkout@v3
       with:
         ref: ${{ steps.GR.outputs.tag }}
-        
+
     - name: GR9 zip
       uses: thedoctor0/zip-release@master
       with:
