@@ -47,6 +47,7 @@ jobs:
     - name: Upload GR6 / 9 Release
       uses: ncipollo/release-action@v1
       with:
+        tag: ${{ steps.GR.outputs.tag }}
         bodyFile: "release.md"
         artifacts: 'GR6.zip,GR9.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
