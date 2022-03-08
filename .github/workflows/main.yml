@@ -19,7 +19,9 @@ jobs:
 #    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref }}
     - name: GR9 zip
       uses: thedoctor0/zip-release@master
       with:
