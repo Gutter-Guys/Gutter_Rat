@@ -126,7 +126,7 @@ If you are using the stock X extrusion, it will need to be shortened before it c
 <img src="Images/X_2020.png" alt="X 2020">
 
 ## Rails
-Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts. Mounting guides are included in the STL folder to make alignment easier. 
+Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts. Mounting guides are included in the STL folder to make alignment easier. (Each rail need 7 M3x8mm and 7 M3 drop/t nuts)
 
 ## Printhead
 The EVA printhead system is amazingly well designed and very flexible. It was the sole reason this upgrade was completed. For the moment, this is compatible with EVA 2.4 setups so go crazy. If it fits EVA, it will fit this setup. I will not be duplicating any of their work here, please go directly to the EVA website and get all you need from there, including BOM and print configurations. 
@@ -169,9 +169,9 @@ From the top you will need:
 ## Gantry
 A little more complicated than the idlers, but simple enough. 
 
-First, mount the Gantry Mounts to the Y Rail carriages. This is straight forward, and makes the final assembly easier.
+First, mount the Gantry Mounts to the Y Rail carriages. This is straight forward, and makes the final assembly easier. This will need 4 M3x6mm per side.
 
-Then, add the two heat sets to each Gantry Bracket. Again, fairly straight forward. 
+Then, add the two heat sets to each Gantry Bracket. Again, fairly straight forward. Preferred are M3x5x4mm heat sets, a total of 4 will be needed. 
 
 Now the complicated part. Align the Gantry Mounts in front of you so they sit as they would in printer. You will notice that one side of the Mounts has a slot and the other side is inclosed. They are set up as follows: (refer to pictures to confirm)
 
@@ -239,14 +239,16 @@ From the top you will need:
 
 <img src="Images/Ganty_Pulley_Config_AM_Right.png" alt="Gantry 20t Pulley Config Right Side">
 
+Then, simply use  M5x45mm bolts to fix it together, with a washer on the bottom below the nut. Then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
+
 ## Motor Mounts
-The motor mount comes in two peices. Mount the stepper to the  base with M3 bolts, then attach firmly to the frame with M5's. Make sure the motor orientation is such that th cables face towards the  back for easy access.
+The motor mount comes in two peices. Mount the stepper to the  base with 4 M3x8mm bolts, then attach firmly to the frame with M5's. Make sure the motor orientation is such that th cables face towards the  back for easy access.
 
 Then, make sure the motor pulleys are orientated correctly. The left pullet will be as per the picture, with the pulley a fraction above flush with the top of the stepper. The right one will be inverted and 10mm from the stepper motor. 
 
 It is easier to run the belts now, before you add the top half - trust me it will be so much easier. Come back to the next bit once they are done. 
 
-Finally, attachedthe top half and fix with M5's. Once attached, use the M3x40mms to anchor the two halves to the stepper motor. 
+Finally, attach the top half and fix to the frame with M5's. Once attached, use the 2 M3x40mms per side to anchor the two halves to the stepper motor. 
 
 <img src="Images/Motor_Mount.png" alt="Motor Mount">
 
@@ -260,7 +262,7 @@ Now for the fun part - putting it all together.
 ### Mounting Hardware
 At this point, you should have the motors mounted, the ilders completed and mounted, Gantry Brackets completed, EVA and only the Gantry Mounts in place on the Y rails. If not, go back and finish these steps first.
 
-First, add the two Gantry Brackets to the X extrusion. They should slip on and be firm but able to be moved without to much effort. You will need to adjust these later on, so its important they can move. Add the two M5x10mm screws and drop nuts now but do not over tighten yet. 
+First, add the two Gantry Brackets to the X extrusion. They should slip on and be firm but able to be moved without to much effort. You will need to adjust these later on, so its important they can move. Add the two M5x6mm screws and drop/t nuts per side now but do not over tighten yet. 
 
 Now, position the X extrusion in the printer so that it sits on the two Gantry Mounts attached to the Y rails. Use M3 screws to attach to the Gantry Mounts. You should now have the X extrusion mounted and it should slide easily on the Y rails. If not, adjust the Gantry Brackets on the X extrusion until it does move easily. **DO NOT FORCE IT!**
 
