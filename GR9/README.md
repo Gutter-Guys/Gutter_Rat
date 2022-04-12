@@ -6,6 +6,8 @@ Currently it can be built to reuse the stock belts, stock pulleys and mounting g
 
 Of course, you can upgrade all these parts to better quality components, as the mod can be reconfigured easily. Please note the dimensions on the stock pulleys and spacers may vary from 3rd party options and require some further modification.
 
+**Currently the there is a design limitation when using the stock pulleys. The stock pulleys are ~2mm wider than a standard 20t pulley. This adds 2mm to the space between the two belts, leaving a Z deflection of 2mm from front to back on the belt path. I have been running this for nearly 500hrs with no visible issues, however I can't promise this will be the case for everyone, so if possible, please look at the cheap upgrade to 20t pulleys.**
+
 
 # Table of Contents
 - **Before You Start**
@@ -26,6 +28,8 @@ Of course, you can upgrade all these parts to better quality components, as the 
     - [Klipper](#klipper)
     - [Tuning](#tuning)
 
+
+<img src="Images/GR9_Render.png" alt="GR9">
 
 # Before You Start
 
@@ -58,28 +62,30 @@ To complete this upgrade you will need the following
     - Stock Motors  (Some testing required)
     - Stock controller board (Please note the Klipper Configs will need to be tweaked to work on a stock board)
     - Stock pulleys
-    - X Extrusion (Cut down slightly to fit) *note: you can buy and cut a new one*
+    - X Extrusion (Cut down slightly to fit, 400mm mininum, 420mm maximum) *note: you can buy and cut a new one*
 
-### GR9 Modified
+### GR9 Modified (Preferred)
 - Order:
-    - 2x MGN9 rails for Y gantry (MGN12 will not fit inside the panels)
-    - 1x MGN12 rail for X gantry (EVA now only supports MGN12)
+    - 2x MGN9H rails for Y gantry (MGN12 will not fit inside the panels)
+    - 1x MGN12H rail for X gantry (EVA now only supports MGN12)
     - Rasberry Pi 3B+/4/Zero2 (I am runnig a Zero 2 Wireless with PA/IS and Accelerometer)
     - 1mm washers/spacers
     - Extruder of Choice (Please use a EVA2.4 supported extruder)
     - Hotend of Choice (Please use a EVA2.4 supported hotend)
     - GT2 Belts
     - 2x Nema17 motors of your choice
-    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2)
+    - Controller with at least 4x TMC2209 (Example config is with SKR E3 v2), 7x TMC2209 required for Tri-Z modifications
     - M3 Heat Sets (4 needed for mounting, more maybe needed for your EVA)
+    - 13mm wide 20t idlers (6 toothed and 2 smooth)
 - Reuse
-    - Stock pulleys
-    - X Extrusion (Cut down slightly to fit) *note: you can buy and cut a new one*
+    - X Extrusion (Cut down slightly to fit, 400mm mininum, 420mm maximum) *note: you can buy and cut a new one*
 
 ### Can I fit MGN12H on my Y if I already have them?
 Short answer: Yes it can be made to work
 
 Longer answer: You can use the GR9_MGN12_Gantry_Mount_TEST file for fitting the X gantry to the E6 via MGN12H rails. The issue is the over hang of the carriage is 2-3mm each side, which conflicts with the stock side panels. If you choose this change, you will need to *very* carefully space out the side panels. A couple check washers will work, or print a small spacer. Just be **very careful as this will add tension to the panels and may crack the acrylic if not tensioned properly!!!** Please, please be aware of this and take care. I would suggest adding spacers of varying depth down the side to avoid a shape bend on the last part of the panel. 
+
+<img src="Images/Panel_Spacer.png" alt="MGN12H Spacer">
 
 # Printing Parts
 
@@ -115,15 +121,19 @@ Up to you, but I have marked each part as A (Accent) or B (Base) so you can do a
 # Assembly
 
 ## X Extrusion
-If you are using the stock X extrusion, it will need to be shortened before it can be used. This can be done by cutting it down to 400mm. We designed the Gantry Brackets to not need an exact measurement, however if you remove a little bit from each end to get to 400mm, you can avoid the original E6 mounting holes allowing the X extrusion to used if you roll back to stock later on. Or simply use a fresh extrusion, completely your choice. 
+If you are using the stock X extrusion, it will need to be shortened before it can be used. This can be done by cutting it down to between 400mm to 420mm. We designed the Gantry Brackets to not need an exact measurement, however if you remove a little bit from each end to get to 400mm, you can avoid the original E6 mounting holes allowing the X extrusion to used if you roll back to stock later on. Or simply use a fresh extrusion, completely your choice. 
+
+<img src="Images/X_2020.png" alt="X 2020">
 
 ## Rails
-Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts.
+Please refer to online guides for mounting and and cleaning rails. MGN9 for Y and MGN12 for X. Nothing special needed, just center them as best you can. It is easier to mount the Y rails after you have mounted the Motor Mounts. Mounting guides are included in the STL folder to make alignment easier. (Each rail need 7 M3x8mm and 7 M3 drop/t nuts)
 
 ## Printhead
 The EVA printhead system is amazingly well designed and very flexible. It was the sole reason this upgrade was completed. For the moment, this is compatible with EVA 2.4 setups so go crazy. If it fits EVA, it will fit this setup. I will not be duplicating any of their work here, please go directly to the EVA website and get all you need from there, including BOM and print configurations. 
 
 Mouint it to the X rail now as it can be pain to add later when the rail is in the printer, but do not add the Hotend as you will need access to the belt mounts.
+
+<img src="Images/EVA2_4.png" alt="EVA2.4">
 
 ## Idlers
 The idler setup is very simple and easy to put together.
@@ -132,53 +142,116 @@ The idler setup is very simple and easy to put together.
 The two vertical M5x10mm screws will need to insert first as they can be hard to get in once the pulleys are in place.
 
 From the top, you will need:
-- 1mm washer/spacer
-- 2mm spacer (small black one reeused from E6 parts)
-- Stock pulley
+- 5mm printed spacer
+- Pulley
 - Compression washer (reused from E6)
-- Stock pulley
+- Pulley
+
+<img src="Images/Idler_config_stock.png" alt="Stock Idler Config">
 
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 Repeat for the other side. Then mount with M5x10mm screws and M5 drop nuts.
 
 ### After market pulleys
-Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
+The two vertical M5x10mm screws will need to insert first as they can be hard to get in once the pulleys are in place.
+
+The current configuration has been tested successfully with standard 20t ilders. You will need a 5mm bore, 13mm width idler. Anything more than 13mm width will require you to adjust the spacer configuration. 
+
+From the top you will need:
+- 6mm printed spacer
+- Pulley
+- 1mm spacer
+- Pulley
+
+<img src="Images/Idler_config_AM.png" alt="20t Idler Config">
 
 ## Gantry
 A little more complicated than the idlers, but simple enough. 
 
-First, mount the Gantry Mounts to the Y Rail carriages. This is straight forward, and makes the final assembly easier.
+First, mount the Gantry Mounts to the Y Rail carriages. This is straight forward, and makes the final assembly easier. This will need 4 M3x6mm per side.
 
-Then, add the two heat sets to each Gantry Bracket. Again, fairly straight forward. 
+Then, add the two heat sets to each Gantry Bracket. Again, fairly straight forward. Preferred are M3x5x4mm heat sets, a total of 4 will be needed. 
 
-Now the complicated part. Alight the Gantry Mounts in front of you so they sit as they would in printer. You will notice that one side of the Mounts has a slot and the other side is inclosed. They are set up as follows: (refer to pictures to confirm)
+Now the complicated part. Align the Gantry Mounts in front of you so they sit as they would in printer. You will notice that one side of the Mounts has a slot and the other side is inclosed. They are set up as follows: (refer to pictures to confirm)
 
-### Slotted side
+### Stock Pulleys
+
+
+#### Left - Slotted side
 From the top you will need:
-- Printed spacer
+- 2mm Printed Spacer
 - Stock pulley
-- 1mm washer
+- 13mm Printed Spacer
 
-### Enclosed side
+#### Left - Enclosed side
 From the top you will need:
-- 1mm washer
+- 15mm Printed Spacer
 - Stock pulley
-- Printed spacer
+- 1mm washer/shim
+
+<img src="Images/Ganty_Pulley_Config_Stock_Left.png" alt="Gantry Stock Pulley Config Left Side">
+
+#### Right - Slotted side
+From the top you will need:
+- 15mm Printed Spacer
+- Stock pulley
+- 1mm washer/shim
+
+#### Right - Enclosed side
+From the top you will need:
+- 2mm Printed Spacer
+- Stock pulley
+- 13mm Printed Spacer
+
+<img src="Images/Ganty_Pulley_Config_Stock_Right.png" alt="Gantry Stock Pulley Config Right Side">
 
 Then, simply reuse the long screw from the E6 to fix it together, with a washer on the bottom below the nut. It may seem a little loose in the idler, so tighten until it no longer wobbles, then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 ### After market pulleys
-Depending on your choice of pulleys, you may need to adjust the spacer configuration. As there are so many options out there, please take the time to compare them to the stock ones first so you know what you need to use. The main issue is the diamter of the inner pulley, as narrower pulleys will change the belt path angle slightly and may cause issues. The inner screw diameter can accomodate up to M5 screws in the mounts by simply clearing it out with a drill bit. 
+The current configuration has been tested successfully with standard 20t ilders. You will need a 5mm bore, 13mm width idler. Anything more than 13mm width will require you to adjust the spacer configuration. 
+
+#### Left - Slotted side
+From the top you will need:
+- 3mm Printed Spacer
+- Pulley
+- 14mm Printed Spacer
+
+#### Left - Enclosed side
+From the top you will need:
+- 16mm Printed Spacer
+- Pulley
+- 1mm washer/shim
+
+<img src="Images/Ganty_Pulley_Config_AM_Left.png" alt="Gantry 20t Pulley Config Left Side">
+
+#### Right - Slotted side
+From the top you will need:
+From the top you will need:
+- 16mm Printed Spacer
+- Pulley
+- 1mm washer/shim
+
+#### Right - Enclosed side
+- 3mm Printed Spacer
+- Pulley
+- 14mm Printed Spacer
+
+<img src="Images/Ganty_Pulley_Config_AM_Right.png" alt="Gantry 20t Pulley Config Right Side">
+
+Then, simply use  M5x45mm bolts to fix it together, with a washer on the bottom below the nut. Then apply loctite (or clear nail polish) to the remaining thread to hold the nut in place.
 
 ## Motor Mounts
-There are two options
+The motor mount comes in two peices. Mount the stepper to the  base with 4 M3x8mm bolts, then attach firmly to the frame with M5's. Make sure the motor orientation is such that th cables face towards the  back for easy access.
 
-### Version 1 (One piece design)
-Simply mount the Motor via the screw points. From there, use M5x10mm screws and M5 drop nuts to mount securely to the frame
+Then, make sure the motor pulleys are orientated correctly. The left pullet will be as per the picture, with the pulley a fraction above flush with the top of the stepper. The right one will be inverted and 10mm from the stepper motor. 
 
-### Version 2 (Clam shell design)
-TBC
+It is easier to run the belts now, before you add the top half - trust me it will be so much easier. Come back to the next bit once they are done. 
+
+Finally, attach the top half and fix to the frame with M5's. Once attached, use the 2 M3x40mms per side to anchor the two halves to the stepper motor. 
+
+<img src="Images/Motor_Mount.png" alt="Motor Mount">
+
 
 ## Other Components
 Similar to the rails, I will leave to you and the internet to work out how to mount things like custom controllers, Raspberry Pi etc. I only suggest to keep it simple and don't take too much on at one time as it will make trouble shooting hard.
@@ -189,7 +262,7 @@ Now for the fun part - putting it all together.
 ### Mounting Hardware
 At this point, you should have the motors mounted, the ilders completed and mounted, Gantry Brackets completed, EVA and only the Gantry Mounts in place on the Y rails. If not, go back and finish these steps first.
 
-First, add the two Gantry Brackets to the X extrusion. They should slip on and be firm but able to be moved without to much effort. You will need to adjust these later on, so its important they can move. Add the two M5x10mm screws and drop nuts now but do not over tighten yet. 
+First, add the two Gantry Brackets to the X extrusion. They should slip on and be firm but able to be moved without to much effort. You will need to adjust these later on, so its important they can move. Add the two M5x6mm screws and drop/t nuts per side now but do not over tighten yet. 
 
 Now, position the X extrusion in the printer so that it sits on the two Gantry Mounts attached to the Y rails. Use M3 screws to attach to the Gantry Mounts. You should now have the X extrusion mounted and it should slide easily on the Y rails. If not, adjust the Gantry Brackets on the X extrusion until it does move easily. **DO NOT FORCE IT!**
 
@@ -206,6 +279,8 @@ The belt should be fairly loose if you have used the stock belts. If you bought 
 If the belts are done, make sure the XY motors are disconnected and move the X back and forth, checkin the racking at the same time. If the X has misaligned again, change the belt tension until it is de-racked again. 
 
 After this is dine, you can mount your Hotend to the Printhead and congrats!
+
+<img src="Images/Full_Gantry_Render.png" alt="Completed Gantry">
 
 # Tuning
 
